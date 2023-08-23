@@ -1,5 +1,5 @@
 const UserController = require('./controllers/UserController')
-
+const Midterm = require('./controllers/Midterm66')
 module.exports = (app) =>{
     //get all user
     app.get('/users', UserController.index),
@@ -15,5 +15,12 @@ module.exports = (app) =>{
     
     //show by id
     app.get('/user/:userId', UserController.show)
+ 
+    //
+    app.post('/add1', Midterm.add1)
 
+    //
+    app.post('/number', Midterm.number) 
+
+    
 }
